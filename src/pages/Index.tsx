@@ -1,18 +1,27 @@
 import Navigation from "@/components/Navigation";
+import Newsletter from "@/components/Newsletter";
+import AdSpace from "@/components/AdSpace";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Sparkles, Film, Users, TrendingUp } from "lucide-react";
+import { ArrowRight, Sparkles, Film, Users, TrendingUp, Play, Award, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-tollywood.jpg";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="container mx-auto text-center">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-20 px-4 min-h-[80vh] flex items-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        >
+          <div className="absolute inset-0 bg-background/80" />
+        </div>
+        <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <Badge className="mb-4" variant="secondary">
               <Sparkles className="h-3 w-3 mr-1" />
@@ -37,6 +46,128 @@ const Index = () => {
                   View Gallery
                 </Link>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 px-4 bg-primary text-primary-foreground">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold mb-2">500+</div>
+              <div className="text-sm opacity-90">Projects Created</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold mb-2">25K+</div>
+              <div className="text-sm opacity-90">Active Users</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold mb-2">₹50L+</div>
+              <div className="text-sm opacity-90">Cost Savings</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold mb-2">95%</div>
+              <div className="text-sm opacity-90">Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Tools Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Featured AI Tools
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Discover the most popular tools used by Tollywood filmmakers
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <Play className="h-8 w-8 text-primary" />
+                  <Badge className="bg-green-100 text-green-800">Live</Badge>
+                </div>
+                <CardTitle>AI Script Generator</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Generate compelling Telugu movie scripts with AI assistance. Perfect for writers and directors.
+                </p>
+                <Button className="w-full">Try Free Demo</Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <Film className="h-8 w-8 text-primary" />
+                  <Badge variant="secondary">Beta</Badge>
+                </div>
+                <CardTitle>Character Designer</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Create unique character designs with traditional Telugu elements and modern aesthetics.
+                </p>
+                <Button className="w-full" variant="outline">Join Beta</Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <Award className="h-8 w-8 text-primary" />
+                  <Badge className="bg-blue-100 text-blue-800">Premium</Badge>
+                </div>
+                <CardTitle>Scene Builder Pro</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Advanced scene planning with AI-powered visualization and storyboard generation.
+                </p>
+                <Button className="w-full">Upgrade to Pro</Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Ad Space */}
+          <AdSpace size="banner" title="Sponsored Content" />
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2">
+              <Newsletter />
+            </div>
+            <div className="space-y-6">
+              <AdSpace size="large" title="Premium Advertisement" />
+              
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Globe className="h-5 w-5" />
+                    Global Reach
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    TollywoodAI is used by filmmakers across 15+ countries, bringing Telugu cinema to the world.
+                  </p>
+                  <Button variant="outline" size="sm" className="w-full">
+                    View Success Stories
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>

@@ -1,8 +1,10 @@
 import Navigation from "@/components/Navigation";
+import AdSpace from "@/components/AdSpace";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { Calendar, User, ArrowRight, Eye, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import blogImage from "@/assets/blog-hero.jpg";
 
 const Blog = () => {
   const posts = [
@@ -13,6 +15,8 @@ const Blog = () => {
       date: "2024-01-15",
       category: "Technology",
       readTime: "5 min read",
+      views: "15.2K",
+      comments: 128,
       featured: true
     },
     {
@@ -22,6 +26,8 @@ const Blog = () => {
       date: "2024-01-10",
       category: "Tutorial",
       readTime: "8 min read",
+      views: "12.8K",
+      comments: 95,
       featured: false
     },
     {
@@ -31,6 +37,8 @@ const Blog = () => {
       date: "2024-01-08",
       category: "Case Study",
       readTime: "6 min read",
+      views: "9.5K",
+      comments: 67,
       featured: false
     },
     {
@@ -40,6 +48,8 @@ const Blog = () => {
       date: "2024-01-05",
       category: "Creative",
       readTime: "7 min read",
+      views: "11.3K",
+      comments: 84,
       featured: false
     },
     {
@@ -49,6 +59,8 @@ const Blog = () => {
       date: "2024-01-03",
       category: "Business",
       readTime: "4 min read",
+      views: "8.7K",
+      comments: 52,
       featured: false
     }
   ];
@@ -60,11 +72,28 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <div className="container mx-auto px-4 py-12">
+        {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">TollywoodAI Blog</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Insights, tutorials, and stories from the intersection of AI and filmmaking
-          </p>
+          <div className="relative mb-8">
+            <img 
+              src={blogImage} 
+              alt="TollywoodAI Blog"
+              className="w-full h-64 object-cover rounded-lg"
+            />
+            <div className="absolute inset-0 bg-background/60 rounded-lg flex items-center justify-center">
+              <div>
+                <h1 className="text-4xl font-bold mb-4 text-foreground">TollywoodAI Blog</h1>
+                <p className="text-xl text-muted-foreground max-w-2xl">
+                  Insights, tutorials, and stories from the intersection of AI and filmmaking
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Ad Space */}
+        <div className="mb-8">
+          <AdSpace size="banner" title="Blog Sponsor" />
         </div>
 
         {/* Featured Post */}
@@ -91,6 +120,14 @@ const Blog = () => {
                     {new Date(featuredPost.date).toLocaleDateString()}
                   </div>
                   <span>{featuredPost.readTime}</span>
+                  <div className="flex items-center gap-1">
+                    <Eye className="h-4 w-4" />
+                    {featuredPost.views}
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <MessageCircle className="h-4 w-4" />
+                    {featuredPost.comments}
+                  </div>
                 </div>
                 <Button className="group">
                   Read More
@@ -100,6 +137,11 @@ const Blog = () => {
             </div>
           </Card>
         )}
+
+        {/* Ad Space */}
+        <div className="mb-8">
+          <AdSpace size="medium" title="Related Articles" />
+        </div>
 
         {/* Regular Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -126,6 +168,14 @@ const Blog = () => {
                       <Calendar className="h-3 w-3" />
                       {new Date(post.date).toLocaleDateString()}
                     </div>
+                    <div className="flex items-center gap-1">
+                      <Eye className="h-3 w-3" />
+                      {post.views}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <MessageCircle className="h-3 w-3" />
+                      {post.comments}
+                    </div>
                   </div>
                   <Button variant="ghost" size="sm" className="group">
                     Read
@@ -135,6 +185,13 @@ const Blog = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        
+        {/* Ad Spaces */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <AdSpace size="medium" title="Tech Resources" />
+          <AdSpace size="medium" title="Industry Events" />
         </div>
 
         <div className="text-center mt-12">

@@ -1,10 +1,11 @@
 import Navigation from "@/components/Navigation";
+import AdSpace from "@/components/AdSpace";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Star, Users } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -18,12 +19,18 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Send us a Message</CardTitle>
-            </CardHeader>
+        {/* Ad Space */}
+        <div className="mb-8">
+          <AdSpace size="banner" title="Contact Partner" />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="lg:col-span-2">
+            {/* Contact Form */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Send us a Message</CardTitle>
+              </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
@@ -64,7 +71,8 @@ const Contact = () => {
                 Send Message
               </Button>
             </CardContent>
-          </Card>
+            </Card>
+          </div>
 
           {/* Contact Information */}
           <div className="space-y-6">
@@ -143,6 +151,50 @@ const Contact = () => {
                 </Button>
               </CardContent>
             </Card>
+            
+            {/* Customer Reviews */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Star className="h-5 w-5" />
+                  Customer Reviews
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="border-b pb-3">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="flex text-yellow-400">★★★★★</div>
+                      <span className="text-sm font-medium">Ravi Kumar</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      "TollywoodAI transformed our film production process. Incredible results!"
+                    </p>
+                  </div>
+                  <div className="border-b pb-3">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="flex text-yellow-400">★★★★★</div>
+                      <span className="text-sm font-medium">Meera Productions</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      "Saved us ₹10 lakhs in pre-production costs. Highly recommended!"
+                    </p>
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="flex text-yellow-400">★★★★☆</div>
+                      <span className="text-sm font-medium">Director Sunil</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      "Great tools for indie filmmakers. User-friendly and powerful."
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Ad Space */}
+            <AdSpace size="medium" title="Contact Solutions" />
           </div>
         </div>
       </div>
