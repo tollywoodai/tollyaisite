@@ -21,7 +21,7 @@ const Tools = () => {
       title: "Character Generator",
       description: "Create unique characters with AI-powered design",
       status: "Available",
-      pricing: "₹299/month",
+      pricing: "$3.59/month",
       popular: false
     },
     {
@@ -29,7 +29,7 @@ const Tools = () => {
       title: "Music Composer",
       description: "Generate background music and soundtracks",
       status: "Coming Soon",
-      pricing: "₹499/month",
+      pricing: "$5.99/month",
       popular: false
     },
     {
@@ -37,7 +37,7 @@ const Tools = () => {
       title: "Video Editor",
       description: "AI-powered video editing and enhancement",
       status: "Coming Soon",
-      pricing: "₹799/month",
+      pricing: "$9.59/month",
       popular: false
     },
     {
@@ -45,7 +45,7 @@ const Tools = () => {
       title: "Scene Builder",
       description: "Create detailed movie scenes with AI guidance",
       status: "Available",
-      pricing: "₹199/month",
+      pricing: "$2.39/month",
       popular: false
     },
     {
@@ -53,7 +53,7 @@ const Tools = () => {
       title: "Effect Generator",
       description: "Generate special effects and CGI concepts",
       status: "Beta",
-      pricing: "₹399/month",
+      pricing: "$4.79/month",
       popular: false
     },
     {
@@ -61,7 +61,7 @@ const Tools = () => {
       title: "Director's Suite",
       description: "Complete AI filmmaking toolkit for professionals",
       status: "Available",
-      pricing: "₹1499/month",
+      pricing: "$17.99/month",
       popular: true
     },
     {
@@ -69,7 +69,7 @@ const Tools = () => {
       title: "Quick Render",
       description: "Fast AI-powered rendering and post-production",
       status: "Available",
-      pricing: "₹99/month",
+      pricing: "$1.19/month",
       popular: false
     }
   ];
@@ -179,7 +179,7 @@ const Tools = () => {
               <CardHeader className="text-center">
                 <Badge className="mb-2">Most Popular</Badge>
                 <CardTitle>Professional</CardTitle>
-                <div className="text-3xl font-bold">₹999<span className="text-lg">/month</span></div>
+                <div className="text-3xl font-bold">$11.99<span className="text-lg">/month</span></div>
                 <p className="text-muted-foreground">For serious filmmakers</p>
               </CardHeader>
               <CardContent className="space-y-3">
