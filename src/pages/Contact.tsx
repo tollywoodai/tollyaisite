@@ -85,7 +85,7 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">hello@tollywoodai.com</p>
+                    <p className="text-muted-foreground">tollywoodaics@gmail.com</p>
                   </div>
                 </div>
                 
@@ -93,7 +93,7 @@ const Contact = () => {
                   <Phone className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-muted-foreground">+91 98765 43210</p>
+                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
                   </div>
                 </div>
                 
@@ -102,8 +102,8 @@ const Contact = () => {
                   <div>
                     <p className="font-medium">Address</p>
                     <p className="text-muted-foreground">
-                      Film City, Hyderabad<br />
-                      Telangana, India 500084
+                      Los Angeles, CA<br />
+                      United States 90210
                     </p>
                   </div>
                 </div>
@@ -113,8 +113,8 @@ const Contact = () => {
                   <div>
                     <p className="font-medium">Business Hours</p>
                     <p className="text-muted-foreground">
-                      Mon - Fri: 9:00 AM - 6:00 PM<br />
-                      Sat: 10:00 AM - 4:00 PM
+                      Mon - Fri: 9:00 AM - 6:00 PM PST<br />
+                      Sat: 10:00 AM - 4:00 PM PST
                     </p>
                   </div>
                 </div>
@@ -177,7 +177,7 @@ const Contact = () => {
                       <span className="text-sm font-medium">Meera Productions</span>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      "Saved us ₹10 lakhs in pre-production costs. Highly recommended!"
+                      "Saved us $150K in pre-production costs. Highly recommended!"
                     </p>
                   </div>
                   <div>
