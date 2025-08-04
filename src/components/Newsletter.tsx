@@ -8,30 +8,30 @@ import newsletterBanner from "@/assets/newsletter-banner.jpg";
 const Newsletter = () => {
   const latestNews = [
     {
-      title: "Prabhas' Next Film 'Salaar 2' Gets Official Release Date",
-      excerpt: "The highly anticipated sequel starring Prabhas and Shruti Haasan is set to release in December 2024...",
-      date: "2024-01-20",
+      title: "AI-Powered Telugu Film 'Digital Dreams' Breaks International Records",
+      excerpt: "The first fully AI-assisted Telugu film has garnered $2.5M in global box office, setting new benchmarks for indie productions...",
+      date: "2025-01-15",
       category: "Breaking News",
       trending: true
     },
     {
-      title: "AI Technology Used in Ram Charan's Upcoming Action Thriller",
-      excerpt: "Revolutionary AI-powered visual effects are being implemented in the upcoming mega star film...",
-      date: "2024-01-19",
+      title: "Revolutionary AI Dubbing Technology Launches for Tollywood",
+      excerpt: "New neural voice synthesis allows real-time dubbing in 15+ languages, expanding Telugu cinema's global reach...",
+      date: "2025-01-14",
       category: "Technology",
       trending: false
     },
     {
-      title: "Allu Arjun's 'Pushpa 3' Script Enhanced with AI Story Generation",
-      excerpt: "The creative team is using advanced AI tools to develop compelling narrative elements...",
-      date: "2024-01-18",
+      title: "Major Studios Invest $50M in AI-Enhanced Production Pipeline",
+      excerpt: "Leading Tollywood production houses announce massive investment in AI infrastructure for next-gen filmmaking...",
+      date: "2025-01-13",
       category: "Industry News",
       trending: true
     },
     {
-      title: "Box Office: Telugu Films Dominate with ₹500 Crore Collection",
-      excerpt: "This quarter shows record-breaking performance for Telugu cinema across India...",
-      date: "2024-01-17",
+      title: "Box Office: AI-Enhanced Films Generate $125M Revenue This Quarter",
+      excerpt: "Films utilizing AI tools show 40% higher ROI compared to traditional productions, industry report reveals...",
+      date: "2025-01-12",
       category: "Box Office",
       trending: false
     }

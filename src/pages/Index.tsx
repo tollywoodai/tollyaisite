@@ -1,6 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Newsletter from "@/components/Newsletter";
 import AdSpace from "@/components/AdSpace";
+import PremiumFeatures from "@/components/PremiumFeatures";
+import AIContentGenerator from "@/components/AIContentGenerator";
+import MonetizationHub from "@/components/MonetizationHub";
+import GoogleAdsense from "@/components/GoogleAdsense";
+import DailyUpdates from "@/components/DailyUpdates";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -64,7 +69,7 @@ const Index = () => {
               <div className="text-sm opacity-90">Active Users</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">₹50L+</div>
+              <div className="text-3xl font-bold mb-2">$62K+</div>
               <div className="text-sm opacity-90">Cost Savings</div>
             </div>
             <div>
@@ -137,12 +142,18 @@ const Index = () => {
             </Card>
           </div>
 
-          {/* Ad Space */}
-          <AdSpace size="banner" title="Sponsored Content" />
+          {/* Google AdSense Banner */}
+          <div className="my-8">
+            <GoogleAdsense 
+              adSlot="1234567890"
+              style={{ width: "100%", height: "100px" }}
+              format="horizontal"
+            />
+          </div>
         </div>
       </section>
 
-      {/* Newsletter Section */}
+      {/* AI Content & Newsletter Section */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -150,18 +161,19 @@ const Index = () => {
               <Newsletter />
             </div>
             <div className="space-y-6">
-              <AdSpace size="large" title="Premium Advertisement" />
+              <AIContentGenerator />
+              <DailyUpdates />
               
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Globe className="h-5 w-5" />
-                    Global Reach
+                    Global Impact
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm mb-4">
-                    TollywoodAI is used by filmmakers across 15+ countries, bringing Telugu cinema to the world.
+                    TollywoodAI powers productions in 25+ countries, generating $50M+ in value for the global film industry.
                   </p>
                   <Button variant="outline" size="sm" className="w-full">
                     View Success Stories
@@ -170,6 +182,16 @@ const Index = () => {
               </Card>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Premium Features Section */}
+      <PremiumFeatures />
+
+      {/* Monetization Hub */}
+      <section className="py-20 px-4 bg-muted/50">
+        <div className="container mx-auto">
+          <MonetizationHub />
         </div>
       </section>
 
